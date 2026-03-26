@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"c:/Users/ertug/OneDrive/Masaüstü/pyproj\" && git add -A && git diff --cached --quiet || (git commit -m \"Auto-commit: changes via Claude\" && git push) 2>/dev/null || true",
+            "timeout": 30,
+            "statusMessage": "GitHub'a push ediliyor..."
+          }
+        ]
+      }
+    ]
+  }
+}
