@@ -61,3 +61,12 @@ Or with VS Code's Jupyter extension.
   scores, confirming that weather has negligible predictive power over stock returns.
 - Results are consistent with the Efficient Market Hypothesis: publicly available information
   such as weather is already reflected in asset prices.
+
+## AI Usage Disclosure
+This project used Anthropic Claude (Sonnet 4.x) as an assistant for:
+- Writing explanatory comments in notebook cells
+- Drafting README and final report structure
+- Debugging Python and sklearn errors
+- Conceptual verification of statistical tests
+
+All code, analysis, and interpretations were reviewed and finalized by me.
