@@ -28,6 +28,10 @@ The mechanism is straightforward: weather affects mood, mood affects risk appeti
 
 Descriptive statistics revealed that BIST 100 daily returns exhibit heavy tails and are not normally distributed — a typical characteristic of financial return series. Scatter plots of each weather variable against daily return showed no visible linear or nonlinear pattern. A correlation heatmap confirmed that all pairwise absolute correlations between weather variables and returns were below 0.05, suggesting negligible linear association even before formal testing.
 
+![Correlation Heatmap of Weather Variables and Daily Return](images/correlation_heatmap.png)
+
+*Figure 1: Correlation heatmap showing pairwise linear associations. All weather-return correlations are below 0.05 in absolute value.*
+
 ### 3.2 Hypothesis Testing
 
 Three families of hypothesis tests were applied, all at significance level α = 0.05:
@@ -59,6 +63,10 @@ Three regression models were trained to predict daily return from weather featur
 | Random Forest (n=100) | −0.3152 | 1.8485 | 1.4563 |
 
 Linear and Ridge Regression produced near-identical results with R² ≈ 0, meaning the models explain essentially none of the variance in returns. Random Forest achieved a negative R², which indicates that the model performs worse than simply predicting the mean — a clear sign of overfitting on the training set without any true generalizable signal to exploit.
+
+![Random Forest Feature Importance](images/feature_importance.png)
+
+*Figure 2: Random Forest feature importance scores. All three weather variables contribute roughly equally, with none standing out as a dominant predictor.*
 
 ---
 
